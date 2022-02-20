@@ -9,17 +9,13 @@ def index():
 
 
 @app.route('/result', methods=["GET", "POST"])
-def quiz():
+def result():
     if request.method == "POST":
-
         user_input: str = request.form['user_input']
+        image: Turtle = turtle_maker(user_input)
 
-        if user_input == '':
-            return render_template('/result')
 
-        main()
-
-        return render_template("index.html/second")
+        return render_template("index.html", image = image)
 
 
 if __name__ == '__main__':

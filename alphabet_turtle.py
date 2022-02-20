@@ -13,6 +13,68 @@ class user_input:
     def __init__(self, word: str):
         self.word = word
 
+def turtle_maker(input: str) -> Turtle:
+    tracer(0, 0)
+    leo: Turtle = Turtle()
+    for i in user_input:
+        if i == "a":
+            a(leo)
+        elif i == "b":
+            letter_b(leo)
+        elif i == "c":
+            c(leo)
+        elif i == "d":
+            d(leo)
+        elif i == "e":
+            e(leo)
+        elif i == "f":
+            f(leo)
+        elif i == "g":
+            letter_g(leo)
+        elif i == "h":
+            h(leo)
+        elif i == "i":
+            i(leo)
+        elif i == "j":
+            j(leo)
+        elif i == "k":
+            k(leo)
+        elif i == "l":
+            letter_l(leo)
+        elif i == "m":
+            m(leo)
+        elif i == "n":
+            n(leo)
+        elif i == "o":
+            o(leo)
+        elif i == "p":
+            p(leo)
+        elif i == "q":
+            q(leo)
+        elif i == "r":
+            letter_r(leo)
+        elif i == "s":
+            s(leo)
+        elif i == "t":
+            t(leo)
+        elif i == "u":
+            u(leo)
+        elif i == "v":
+            v(leo)
+        elif i == "w":
+            w(leo)
+        elif i == "x":
+            x(leo)
+        elif i == "y":
+            y(leo)
+        elif i == "z":
+            z(leo)
+        else:
+            user_input = input("Invalid Characters. Try Again: ")
+    leo.hideturtle()
+    leo.speed(0)
+    update()
+    done()
 
 def main() -> None:
     """The entrypoint of the program."""
