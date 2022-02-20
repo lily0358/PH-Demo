@@ -8,15 +8,15 @@ def index():
     return render_template('index.html')
 
 
-@app.route("/result", methods=["GET", "POST"])
+@app.route("result.html", methods=["GET", "POST"])
 def result():
     if request.method == "POST":
         print("hello world")
         user_input: str = request.form['user_input']
-        image: Turtle = turtle_maker(user_input)
+        main()
 
 
-        return render_template("result.html", image = image)
+        return render_template("result.html")
     return render_template("index.html")
 
 
