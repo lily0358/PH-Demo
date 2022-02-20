@@ -11,6 +11,7 @@ def index():
 @app.route("/result", methods=["GET", "POST"])
 def result():
     if request.method == "POST":
+        print("hello world")
         user_input: str = request.form['user_input']
         image: Turtle = turtle_maker(user_input)
 
