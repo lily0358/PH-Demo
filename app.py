@@ -16,7 +16,7 @@ def result():
 
 
         return render_template("result.html", image = image)
-    return render_template("index.html")
+    return render_template("result.html")
 
 
 if __name__ == '__main__':
