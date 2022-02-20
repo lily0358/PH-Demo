@@ -70,6 +70,7 @@ def main() -> None:
             z(leo)
         else:
             user_input = input("Invalid Characters. Try Again: ")
+    leo.hideturtle()
     leo.speed(0)
     update()
     done()
