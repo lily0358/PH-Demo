@@ -8,11 +8,6 @@ def index():
     return render_template('index.html')
 
 
-@app.route("/second")
-def second():
-    main()
-    return render_template('index.html/second')
-
 @app.route('/second', methods=["GET", "POST"])
 def quiz():
     if request.method == "POST":
