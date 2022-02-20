@@ -13,5 +13,19 @@ def second():
     main()
     return render_template('index.html/second')
 
+@app.route('/second', methods=["GET", "POST"])
+def quiz():
+    if request.method == "POST":
+
+        user_input: str = request.form['user_input']
+
+        if user_input == '':
+            return render_template("index.html/second")
+
+        main()
+
+        return render_template("index.html/second")
+
+
 if __name__ == '__main__':
     app.run(debug=True)

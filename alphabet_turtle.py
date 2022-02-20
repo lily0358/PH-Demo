@@ -7,6 +7,11 @@ colormode(255)
 
 # get an input from the user
 # user_word: str = input("Choose a word to generate an image!: ")
+class user_input:
+    word: str
+
+    def __init__(self, word: str):
+        self.word = word
 
 
 def main() -> None:
