@@ -1,18 +1,22 @@
-"""Functions in Python for Turtle Art."""
+"""Functions in Python for the Website."""
 
 from turtle import Turtle, colormode, done, tracer, update
+from tkinter import *
+from PIL import Image
 import random
 from random import randint
 colormode(255)
 
 # get an input from the user
+# user_word: str = input("Choose a word to generate an image!: ")
 
+class user_input:
+    word: str
 
+    def __init__(self, word: str):
+        self.word = word
 
-def main() -> None:
-    """The entrypoint of the program."""
-    user_input: str = input("Enter a word for a randomly generated piece of art!: ")
-    user_input = user_input.lower()
+def turtle_maker(input: str) -> Turtle:
     tracer(0, 0)
     leo: Turtle = Turtle()
     for i in user_input:
@@ -33,7 +37,7 @@ def main() -> None:
         elif i == "h":
             h(leo)
         elif i == "i":
-            letter_i(leo)
+            i(leo)
         elif i == "j":
             j(leo)
         elif i == "k":
@@ -73,6 +77,81 @@ def main() -> None:
     leo.hideturtle()
     leo.speed(0)
     update()
+    leo_screen = leo.getscreen()
+    leo_screen.getcanvas().postscript(file = "img_turtle.eps")
+    file = Image.open("img_turtle.eps")
+    file.save("img_turtle.jpg")
+    done()
+
+
+def main() -> None:
+    """The entrypoint of the program."""
+    user_input: str = input("Enter a word for a randomly generated piece of art!: ")
+    user_input = user_input.lower()
+    tracer(0, 0)
+    leo: Turtle = Turtle()
+    for i in user_input:
+        if i == "a":
+            a(leo)
+        elif i == "b":
+            letter_b(leo)
+        elif i == "c":
+            c(leo)
+        elif i == "d":
+            d(leo)
+        elif i == "e":
+            e(leo)
+        elif i == "f":
+            f(leo)
+        elif i == "g":
+            letter_g(leo)
+        elif i == "h":
+            h(leo)
+        elif i == "i":
+            i(leo)
+        elif i == "j":
+            j(leo)
+        elif i == "k":
+            k(leo)
+        elif i == "l":
+            letter_l(leo)
+        elif i == "m":
+            m(leo)
+        elif i == "n":
+            n(leo)
+        elif i == "o":
+            o(leo)
+        elif i == "p":
+            p(leo)
+        elif i == "q":
+            q(leo)
+        elif i == "r":
+            letter_r(leo)
+        elif i == "s":
+            s(leo)
+        elif i == "t":
+            t(leo)
+        elif i == "u":
+            u(leo)
+        elif i == "v":
+            v(leo)
+        elif i == "w":
+            w(leo)
+        elif i == "x":
+            x(leo)
+        elif i == "y":
+            y(leo)
+        elif i == "z":
+            z(leo)
+        else:
+            user_input = input("Invalid Characters. Try Again: ")
+    leo.hideturtle()
+    leo.speed(0)
+    update()
+    leo_screen = leo.getscreen()
+    leo_screen.getcanvas().postscript(file = "img_turtle.eps")
+    file = Image.open("img_turtle.eps")
+    file.save("img_turtle.jpg")
     done()
 
 
