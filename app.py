@@ -8,14 +8,14 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/second', methods=["GET", "POST"])
+@app.route('/result', methods=["GET", "POST"])
 def quiz():
     if request.method == "POST":
 
         user_input: str = request.form['user_input']
 
         if user_input == '':
-            return render_template("index.html/second")
+            return render_template('/result')
 
         main()
 
