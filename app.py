@@ -15,7 +15,7 @@ def result():
         image: Turtle = turtle_maker(user_input)
 
 
-        return render_template("index.html", image = image)
+        return render_template("result.html", image = image)
 
 
 if __name__ == '__main__':
