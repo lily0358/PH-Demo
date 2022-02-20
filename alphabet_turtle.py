@@ -1,6 +1,8 @@
 """Functions in Python for the Website."""
 
 from turtle import Turtle, colormode, done, tracer, update
+from tkinter import *
+from PIL import Image
 import random
 from random import randint
 colormode(255)
@@ -74,6 +76,10 @@ def turtle_maker(input: str) -> Turtle:
     leo.hideturtle()
     leo.speed(0)
     update()
+    leo_screen = leo.getscreen()
+    leo_screen.getcanvas().postscript(file = "img_turtle.eps")
+    file = Image.open("img_turtle.eps")
+    file.save("img_turtle.jpg")
     done()
 
 def main() -> None:
@@ -140,6 +146,10 @@ def main() -> None:
     leo.hideturtle()
     leo.speed(0)
     update()
+    leo_screen = leo.getscreen()
+    leo_screen.getcanvas().postscript(file = "img_turtle.eps")
+    file = Image.open("img_turtle.eps")
+    file.save("img_turtle.jpg")
     done()
 
 
